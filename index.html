@@ -1,0 +1,14 @@
+---
+layout: default
+title: Microblog
+---
+
+<h1>Microblog</h1>
+
+{% for post in site.posts %}
+<div class="post">
+  {{ post.content }}
+  <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
+  <hr />
+</div>
+{% endfor %}
