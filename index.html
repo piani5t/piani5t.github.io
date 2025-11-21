@@ -3,12 +3,64 @@ layout: default
 title: Microblog
 ---
 
-<h1>Microblog</h1>
+<div style="text-align: center; margin-bottom: 1.5rem">
+  <img
+    src="pfp.png"
+    alt="Profile Picture"
+    style="border-radius: 50%; width: 100px; height: 100px"
+  />
+</div>
+<h1>Milad's microblog</h1>
+
+<style>
+  body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .post {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+  }
+  .date {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+  }
+  .comment-link {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+  }
+  a {
+    color: #4da6ff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 1.5rem 0;
+  }
+</style>
 
 {% for post in site.posts %}
 <div class="post">
   {{ post.content }}
   <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
+  <div class="comment-link">
+    <a
+      href="mailto:milad@gmail.com?subject=comment for {{ post.title | uri_escape }}"
+      >Comment</a
+    >
+  </div>
   <hr />
 </div>
 {% endfor %}
