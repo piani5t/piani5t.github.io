@@ -39,9 +39,8 @@ title: Microblog
     padding: 1.5rem;
   }
   .post {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #333;
+    border: 1px solid #333;
+    padding: 1rem;
   }
   .date {
     color: #888;
@@ -78,9 +77,15 @@ title: Microblog
     flex-flow: row nowrap;
     gap: 6px;
   }
+  .posts-cnt-header {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
 </style>
 
-<div>Posts</div>
+<div class="posts-cnt-header">Posts</div>
 {% for post in site.posts %}
 <div class="post">
   {{ post.content }}
