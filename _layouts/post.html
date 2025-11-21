@@ -32,7 +32,11 @@ layout: default
 </div>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
+    font-family: sans-serif;
     background: #121212;
     color: #e0e0e0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -43,7 +47,7 @@ layout: default
     padding: 20px;
   }
   .socials-cnt {
-    font-size: 0.9rem;
+    font-size: 0.65rem;
     display: flex;
     flex-flow: row nowrap;
     gap: 4px;
@@ -55,6 +59,8 @@ layout: default
     padding: 1.5rem;
     display: flex;
     flex-flow: row nowrap;
+    gap: 6px;
+    justify-content: space-around;
   }
   .post {
     border: 1px solid #333;
@@ -71,11 +77,14 @@ layout: default
     margin: 0;
     font-weight: normal;
   }
+  h1 {
+    font-size: 1.5rem;
+  }
   h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   a {
-    color: #4da6ff;
+    color: #9842ed;
     text-decoration: none;
   }
   a:hover {
@@ -99,6 +108,11 @@ layout: default
   .posts-cnt-header {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .header-cnt {
+      flex-direction: column;
+    }
   }
 </style>
 
