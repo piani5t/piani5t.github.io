@@ -52,17 +52,24 @@ title: Microblog
     border-top: 1px solid #333;
     margin: 1.5rem 0;
   }
+  .post-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 6px;
+  }
 </style>
 
 {% for post in site.posts %}
 <div class="post">
   {{ post.content }}
-  <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
-  <div class="comment-link">
-    <a
-      href="mailto:milad@gmail.com?subject=comment for {{ post.title | uri_escape }}"
-      >Comment</a
-    >
+  <div class="post-footer">
+    <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
+    <div class="comment-link">
+      <a
+        href="mailto:milad@gmail.com?subject=comment for {{ post.title | uri_escape }}"
+        >Comment</a
+      >
+    </div>
   </div>
   <hr />
 </div>
